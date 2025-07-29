@@ -1,0 +1,240 @@
+:root {
+  --primary: #5EABD6;
+  --secondary: #FEFBC7;
+  --accent-soft: #FFB4B4;
+  --accent-bold: #E14434;
+  --text-dark: #2c2c2c;
+  --bg-light: #f9f9f9;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+/* Section Title */
+.section-title {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--secondary) !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* Card */
+.card {
+  border: none;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Tombol Umum */
+.btn {
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4a9ac2;
+}
+
+.btn-danger {
+  background-color: var(--accent-bold);
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c7322a;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f2ac;
+  color: black;
+}
+
+/* Tombol Hitung */
+.btn-hitung {
+  width: 100%;
+  background-color: var(--accent-bold);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn-hitung:hover {
+  background-color: #c7322a;
+}
+
+/* Tabel */
+.table {
+  font-size: 0.95rem;
+  vertical-align: middle;
+  border-color: #dee2e6;
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+.table thead {
+  background-color: var(--primary);
+  color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f7fafd;
+}
+
+/* Custom Table Head Colors (optional) */
+.table-head-soft {
+  background-color: var(--secondary);
+  color: black;
+}
+
+.table-head-accent {
+  background-color: var(--accent-soft);
+  color: black;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Sidebar Saham */
+.sidebar {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.saham-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.saham-active {
+  background-color: var(--secondary);
+  font-weight: bold;
+}
+
+/* Container Grafik */
+.chart-container {
+  min-height: 500px;
+}
+
+/* Utility */
+.section-padding {
+  padding: 3rem 1.5rem;
+}
+
+.shadow-soft {
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.text-center-sm {
+  text-align: center;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Print View */
+@media print {
+  nav, footer, .btn, .navbar, .mb-4.d-flex {
+    display: none !important;
+  }
+  .container {
+    max-width: 100% !important;
+  }
+  body {
+    margin: 20px;
+    color: black;
+    background: white;
+  }
+  .table {
+    font-size: 12px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .btn-hitung {
+    font-size: 1rem;
+  }
+}

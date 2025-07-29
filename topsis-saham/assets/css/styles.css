@@ -1,0 +1,12 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
+
+footer {
+  font-size: 14px;
+}
